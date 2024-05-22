@@ -1,0 +1,13 @@
+[Unit]
+Description=Demo Python Service
+After=network.target
+
+[Service]
+User=<username>
+Group=<groupname>
+WorkingDirectory=/path/to/your/service
+ExecStart=/usr/bin/python3 your_script.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

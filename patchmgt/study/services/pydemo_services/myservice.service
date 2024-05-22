@@ -1,0 +1,11 @@
+[Unit]
+Description=My Python Service
+After=network.target
+
+[Service]
+User=avs
+ExecStart=/usr/bin/python3 patchmgt/study/services/pydemo_services/demo_service.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

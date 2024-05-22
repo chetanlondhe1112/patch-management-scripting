@@ -1,0 +1,35 @@
+StartTime,Event,Details
+2024-04-24 17:33:03.549828,Starting Agent,
+,System Check,System is ON.
+,System Space Availabilty Check,Space Is available:31959783047
+,System Space Availabilty Check,Service working
+,Patch Installation,5034441:Installation Failed:2
+,Patch Installation,5037724:Installation Failed:2
+,Patch Installation,2267602:Installation Failed:2
+,Patch Installation,no patch number:Installation Failed:
+2024-04-24 17:34:04.882155,Agent Stoped,
+2024-04-24 17:36:19.506745,Starting Agent,
+,System Check,System is ON.
+,System Space Availabilty Check,Space Is available:29.760827667079866GB
+,System Space Availabilty Check,Service working
+,Patch Installation,5034441:Installation Failed:2
+,Patch Installation,5037724:Installation Failed:2
+,Patch Installation,2267602:Installation Failed:2
+,Patch Installation,no patch number:Installation Failed:
+2024-04-24 17:36:53.277789,Agent Stoped,
+2024-04-24 17:54:11.905834,Starting Agent,
+,System Check,System is ON.
+,System Space Availabilty Check,Space Is available:29.752324706874788GB
+,System Space Availabilty Check,Service working
+,Patch Installation,5034441:Installation Failed:2
+,Patch Installation,5037724:Installation Failed:2
+,Patch Installation,2267602:Installation Failed:2
+,Patch Installation,no patch number:Installation Failed:
+2024-04-24 17:55:38.734812,Agent Stoped,
+2024-04-25 09:54:21.186079,Starting Agent,
+,System Check,System is ON.
+,System Space Availabilty Check,Space Is available:29.345083518885076GB
+,System Space Availabilty Check,Service working
+,Patch Installation,2267602:Installation Failed:2
+,Patch Installation,no patch number:Installation Failed:
+2024-04-25 09:55:36.106985,Agent Stoped,
