@@ -1,0 +1,15 @@
+[database]
+user = "postgres"
+password = "password"
+host = "localhost"
+port = 5432
+dbname = "postgres"
+
+[rabbitmq]
+host = "localhost"
+port = 5672  # Default RabbitMQ port
+queue = "bye"
+routing_key = "bye"
+
+[insert]
+port = 5673

@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pandas as pd
 import psycopg2
+import toml
 from datetime import datetime
 
 # Define the request body schema
@@ -19,6 +20,18 @@ class ScheduleData(BaseModel):
 # Create a FastAPI instance
 app = FastAPI()
 
+# Load configuration from file
+def load_config(config_file='taetoagent_config.toml'):
+    return toml.load(config_file)
+
+config = load_config()
+
+# Database configuration
+pg_config = config['database']
+
+# API config
+api_config = config['api']
+
 # Database connection parameters
 DATABASE_URL = "postgresql://postgres:password@localhost/postgres"
 
@@ -26,7 +39,7 @@ DATABASE_URL = "postgresql://postgres:password@localhost/postgres"
 async def get_schedule_data(device_info: DeviceInfo):
     try:
         # Connect to the PostgreSQL database
-        conn = psycopg2.connect(DATABASE_URL)
+        conn = psycopg2.connect(f"postgresql://{pg_config['username']}:{pg_config['password']}@{pg_config['host']}/{pg_config['database']}")
         
         # Query the database using pandas
         query = f"""
@@ -55,6 +68,8 @@ async def get_schedule_data(device_info: DeviceInfo):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
+    uvicorn.run(app, host=str(api_config['host']), port=api_config['port'], log_level="info")

@@ -1,0 +1,43 @@
+# Configuration file for SCB of patch Management Project
+
+# Database configuration
+[database]
+username = "postgres"
+password = "password"
+host = "localhost"
+port = 5432
+database = "postgres"
+
+# RabbitMQ configuration
+[rabbitmq]
+host = "localhost"
+port = 443  
+consumer_queue = "hello"
+consumer_routing_key = "hello"
+producer_queue = "bye"
+producer_routing_key = "bye"
+
+# API configuration
+[api]
+
+    # Postgres API
+    [api.postgres]
+    host = "localhost"
+    port = 5432
+
+    # TAE to Agent API
+    [api.tae_to_agent]
+    host = "127.0.0.1"
+    port = 8443
+
+# Logging configuration
+[log]
+
+    # Status log path
+    [log.status_log_path]
+    path = "D:/data_files/"
+
+    # API log paths
+    [log.api_log_path]
+    get_schedule_path = "D:/data_files/api_log/get_schedule_data.log"
+    status_log_path = "D:/data_files/api_log/status_log_data.log"
