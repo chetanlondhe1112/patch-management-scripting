@@ -1,2 +1,3 @@
 # patch-management-scripting
-Patch management scripting for Anunta
+
+SCB Setup for Patch management scripting
